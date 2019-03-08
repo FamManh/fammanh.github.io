@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on Hello Friend</title>
+    <title>Posts on Mạnh Phạm Blog</title>
     <link>https://fammanh.github.io/post/</link>
-    <description>Recent content in Posts on Hello Friend</description>
+    <description>Recent content in Posts on Mạnh Phạm Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 08 Mar 2018 00:00:00 +0000</lastBuildDate>
@@ -18,23 +18,6 @@
       
       <guid>https://fammanh.github.io/post/markdown/</guid>
       <description>MarkDown là gì? Markdown là ngôn ngữ đánh dấu văn bản được tạo ra bởi John Gruber vào năm 2004 với mục đích &amp;ldquo; Dễ viết - dễ đọc - dễ sử dụng &amp;ldquo;. Markdown dùng để tạo kiểu văn bản cho website, điều khiển việc hiển thị document. định dạng chữ in đậm in nghiêng, thêm ảnh, tạo dạnh sách&amp;hellip; và nhiều thứ khác mà bạn có thể làm với Markdown.</description>
-    </item>
-    
-    <item>
-      <title>Hello Friend</title>
-      <link>https://fammanh.github.io/post/hello/</link>
-      <pubDate>Wed, 17 Sep 1986 00:00:00 +0000</pubDate>
-      
-      <guid>https://fammanh.github.io/post/hello/</guid>
-      <description> &amp;ldquo;Hello, friend?&amp;rdquo; That&amp;rsquo;s lame. Maybe I should give you a name&amp;hellip;
-But that&amp;rsquo;s a slippery slope.
-You&amp;rsquo;re only in my head.
-We have to remember that&amp;hellip;
-Shit.
-It&amp;rsquo;s actually happened.
-I&amp;rsquo;m talking to an imaginary person.
-— Mr. Robot S01E01
- </description>
     </item>
     
   </channel>
