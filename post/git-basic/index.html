@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <title>Tìm hiểu git cơ bản :: Mạnh Phạm Blog — Nơi lưu giữ kiến thức</title>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="description" content="Git là gì? Repository là gì? Branch là gì? Repository có thể hiểu là một kho chứa toàn bộ project, như thông tin chi tiết về project, sourcode, lịch sử thay đổi nội dung và nội dung thay đổi của từng cá nhân trên project. Dữ liệu của repository được lwuu trong thư mục .git.
+Branch được hiểu là nhánh của repository, mỗi nhánh hoạt động riêng biệt và không ảnh hưởng đến các nhánh khác."/>
+<meta name="keywords" content=""/>
+<meta name="robots" content="noodp"/>
+<link rel="canonical" href="https://fammanh.github.io/post/git-basic/" />
+
+
+<link rel="stylesheet" href="https://fammanh.github.io/assets/style.css">
+
+
+<link rel="stylesheet" href="https://fammanh.github.io/style.css">
+
+
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://fammanh.github.io/img/apple-touch-icon-144-precomposed.png">
+<link rel="shortcut icon" href="https://fammanh.github.io/img/favicon.png">
+
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Tìm hiểu git cơ bản :: Mạnh Phạm Blog — Nơi lưu giữ kiến thức" />
+<meta name="twitter:description" content="Git là gì? Repository là gì? Branch là gì? Repository có thể hiểu là một kho chứa toàn bộ project, như thông tin chi tiết về project, sourcode, lịch sử thay đổi nội dung và nội dung thay đổi của từng cá nhân trên project. Dữ liệu của repository được lwuu trong thư mục .git.
+Branch được hiểu là nhánh của repository, mỗi nhánh hoạt động riêng biệt và không ảnh hưởng đến các nhánh khác." />
+<meta name="twitter:site" content="https://fammanh.github.io/" />
+<meta name="twitter:creator" content="Manh Pham" />
+<meta name="twitter:image" content="">
+
+
+<meta property="og:locale" content="en" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Tìm hiểu git cơ bản :: Mạnh Phạm Blog — Nơi lưu giữ kiến thức">
+<meta property="og:description" content="Git là gì? Repository là gì? Branch là gì? Repository có thể hiểu là một kho chứa toàn bộ project, như thông tin chi tiết về project, sourcode, lịch sử thay đổi nội dung và nội dung thay đổi của từng cá nhân trên project. Dữ liệu của repository được lwuu trong thư mục .git.
+Branch được hiểu là nhánh của repository, mỗi nhánh hoạt động riêng biệt và không ảnh hưởng đến các nhánh khác." />
+<meta property="og:url" content="https://fammanh.github.io/post/git-basic/" />
+<meta property="og:site_name" content="Tìm hiểu git cơ bản" />
+<meta property="og:image" content="">
+<meta property="og:image:width" content="2048">
+<meta property="og:image:height" content="1024">
+
+<meta property="article:published_time" content="2018-03-08 00:00:00 &#43;0000 UTC" />
+
+
+
+
+
+
+
+</head>
+<body class="">
+<div class="container">
+  <header class="header">
+  <span class="header__inner">
+    <a href="/" class="logo" style="text-decoration: none;">
+  
+    <span class="logo__mark"><svg xmlns="http://www.w3.org/2000/svg" class="greater-icon" width="44" height="44" viewBox="0 0 44 44">
+  <polyline fill="none" stroke="#000" stroke-width="2" points="15 8 29.729 22.382 15 35.367"/>
+</svg>
+</span>
+    <span class="logo__text">Mạnh Phạm</span>
+    <span class="logo__cursor"></span>
+  
+</a>
+
+    <span class="header__right">
+      
+        <nav class="menu">
+  <ul class="menu__inner menu__inner--desktop">
+    
+      
+        
+          <li><a href="/about">About</a></li>
+        
+      
+        
+          <li><a href="/showcase">Showcase</a></li>
+        
+      
+      
+    
+  </ul>
+
+  <ul class="menu__inner menu__inner--mobile">
+    
+      
+        <li><a href="/about">About</a></li>
+      
+    
+      
+        <li><a href="/showcase">Showcase</a></li>
+      
+    
+  </ul>
+</nav>
+
+        <span class="menu-trigger">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M0 0h24v24H0z" fill="none"/>
+            <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+          </svg>
+        </span>
+      
+      <span class="theme-toggle">
+        <svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
+  3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7
+  13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"/>
+</svg>
+
+      </span>
+    </span>
+  </span>
+</header>
+
+
+  <div class="content">
+    
+  <div class="post">
+    <h2 class="post-title"><a href="https://fammanh.github.io/post/git-basic/">Tìm hiểu git cơ bản</a></h2>
+    <div class="post-meta">
+      
+        <span class="post-date">
+            2018-03-08
+        </span>
+      
+      <span class="post-author">— Written by Manh Pham</span>
+      
+    </div>
+
+    
+
+    
+
+    <div class="post-content">
+      
+
+<h2 id="git-là-gì">Git là gì?</h2>
+
+<h2 id="repository-là-gì-branch-là-gì">Repository là gì? Branch là gì?</h2>
+
+<p><strong>Repository</strong> có thể hiểu là một kho chứa toàn bộ project, như thông tin chi tiết về project, sourcode, lịch sử thay đổi nội dung và nội dung thay đổi của từng cá nhân trên project. Dữ liệu của repository được lwuu trong thư mục <code>.git</code>.</p>
+
+<p><strong>Branch</strong> được hiểu là nhánh của repository, mỗi nhánh hoạt động riêng biệt và không ảnh hưởng đến các nhánh khác. Tuy nhiên tùy thuộc nhu cấu của người dùng, việc gộp các nhánh lại có thể thực hiện được bằng thao tác <code>mearge</code>.</p>
+
+<h2 id="làm-thế-nào-để-xóa-một-branch-ở-phía-local-làm-thế-nào-để-xóa-một-branch-remote">Làm thế nào để xóa một branch ở phía local, làm thế nào để xóa một branch remote?</h2>
+
+<p>Thế <code>Remote</code> và <code>local</code> là gì? <code>Remote</code>: lưu trữ từ xa, <code>Local</code>: lưu trữ cục bộ.</p>
+
+<ul>
+<li><code>Remote repository</code> được lưu ở server sẽ lưu trữ những remote branch. Ta có thể kiểm tra danh sách những <code>remote branch</code> hiện có bằng lệnh <code>$ git branch -r</code></li>
+<li><code>Local repository</code> được lưu tại máy tính cá nhân sẽ lưu trữ những <code>local branch</code>. Tương tự, việc kiểm tra những local branch hiện có cũng được thực hiện như sau: <code>$ git branch</code>. Sự khác biệt của <code>-r</code> hay <code>--remote</code> để thể hiện là thao tác đang thực hiện với remote branch. Tuy nhiên thao tác xóa ở đây sẽ nói đến việc xóa local branch, remote branch lưu ở local và remote branch. Cụ thể</li>
+</ul>
+
+<h3 id="xóa-local-branch-và-remote-branch-lưu-ở-local">Xóa local branch và remote branch lưu ở local:</h3>
+
+<p>Được thực hiện khi đang ở branch khác.</p>
+
+<ul>
+<li><p>Nếu đã được merge với branch hiện tại và push lên remote nếu liên kết với remote branch:
+<code>git branch -d &lt;branch_name&gt;</code>
+<code>git branch -d -r &lt;branch_name&gt;</code></p></li>
+
+<li><p>Xóa thẳng tay không cần lý do: <code>$ git branch -D &lt;branch_name&gt;</code> <code>$git branch -D -r &lt;branch_name&gt;</code></p>
+
+<h3 id="xóa-remote-branch">Xóa remote branch</h3></li>
+</ul>
+
+<p><a href="https://viblo.asia/p/git-va-nhung-van-de-co-ban-vyDZOQ8R5wj">Source</a></p>
+
+    </div>
+    
+      <div class="pagination">
+        <div class="pagination__title">
+          <span class="pagination__title-h">Read other posts</span>
+          <hr />
+        </div>
+        <div class="pagination__buttons">
+          
+            <span class="button previous">
+              <a href="https://fammanh.github.io/post/linux-1-tim-hieu-ve-shell/">
+                <span class="button__icon">←</span>
+                <span class="button__text">Linux P1: Tìm hiểu về shell trong Linux</span>
+              </a>
+            </span>
+          
+          
+        </div>
+      </div>
+    
+
+    
+
+    </div>
+
+  </div>
+
+  
+    <footer class="footer">
+  <div class="footer__inner">
+    
+      <a href="/" class="logo" style="text-decoration: none;">
+  
+    <span class="logo__mark"><svg xmlns="http://www.w3.org/2000/svg" class="greater-icon" width="44" height="44" viewBox="0 0 44 44">
+  <polyline fill="none" stroke="#000" stroke-width="2" points="15 8 29.729 22.382 15 35.367"/>
+</svg>
+</span>
+    <span class="logo__text">Mạnh Phạm</span>
+    <span class="logo__cursor"></span>
+  
+</a>
+
+      <div class="copyright">
+        <span>© 2019 Nơi lưu trữ kiến thức</span>
+      </div>
+    
+  </div>
+</footer>
+
+<script src="https://fammanh.github.io/assets/main.js"></script>
+<script src="https://fammanh.github.io/assets/prism.js"></script>
+
+  
+</div>
+
+</body>
+</html>
