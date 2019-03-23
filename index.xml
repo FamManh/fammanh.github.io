@@ -52,12 +52,31 @@ This theme is pretty basic and covers all of the essentials. All you have to do 
     </item>
     
     <item>
+      <title>#1 Dev tool tips and tricks</title>
+      <link>https://fammanh.github.io/post/javascript-front-end-tips-tricks/</link>
+      <pubDate>Fri, 16 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://fammanh.github.io/post/javascript-front-end-tips-tricks/</guid>
+      <description>Dev tool tips and tricks 1. what is dev tool? 2. Find EventListerners 3. Get EventListerners breakpoints 4. getEventListeners() var elm = document.querySelector(&#39;.btn&#39;) getEventListeners(elm); // Show object events of elm  5. monitorEvent() // Ghi lại mọi event tác động tới elm object monitorEvents(elm); // with options monitorEvents(elm, [&#39;click&#39;, &#39;mouseout&#39;]); // Hủy unmonitorEvents(elm);  7. Find in DOM by CSS selector Bật cửa sổ Inspect nhấn tổ hợp Ctrl + F tìm kiếm bình thường, có thể tìm kiếm theo class .</description>
+    </item>
+    
+    <item>
       <title>#1 Làm chủ Markdown | Mastering MarkDown</title>
       <link>https://fammanh.github.io/post/markdown/</link>
       <pubDate>Thu, 08 Mar 2018 00:00:00 +0000</pubDate>
       
       <guid>https://fammanh.github.io/post/markdown/</guid>
       <description>MarkDown là gì? Markdown là ngôn ngữ đánh dấu văn bản được tạo ra bởi John Gruber vào năm 2004 với mục đích &amp;ldquo; Dễ viết - dễ đọc - dễ sử dụng &amp;ldquo;. Markdown dùng để tạo kiểu văn bản cho website, điều khiển việc hiển thị document. định dạng chữ in đậm in nghiêng, thêm ảnh, tạo dạnh sách&amp;hellip; và nhiều thứ khác mà bạn có thể làm với Markdown.</description>
+    </item>
+    
+    <item>
+      <title>Tìm hiểu git cơ bản</title>
+      <link>https://fammanh.github.io/post/git-basic/</link>
+      <pubDate>Thu, 08 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://fammanh.github.io/post/git-basic/</guid>
+      <description>Git là gì? Repository là gì? Branch là gì? Repository có thể hiểu là một kho chứa toàn bộ project, như thông tin chi tiết về project, sourcode, lịch sử thay đổi nội dung và nội dung thay đổi của từng cá nhân trên project. Dữ liệu của repository được lwuu trong thư mục .git.
+Branch được hiểu là nhánh của repository, mỗi nhánh hoạt động riêng biệt và không ảnh hưởng đến các nhánh khác.</description>
     </item>
     
     <item>

@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <title>#1 Dev tool tips and tricks :: Mạnh Phạm Blog — Nơi lưu giữ kiến thức</title>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="description" content="Dev tool tips and tricks 1. what is dev tool? 2. Find EventListerners 3. Get EventListerners breakpoints 4. getEventListeners() var elm = document.querySelector(&#39;.btn&#39;) getEventListeners(elm); // Show object events of elm  5. monitorEvent() // Ghi lại mọi event tác động tới elm object monitorEvents(elm); // with options monitorEvents(elm, [&#39;click&#39;, &#39;mouseout&#39;]); // Hủy unmonitorEvents(elm);  7. Find in DOM by CSS selector Bật cửa sổ Inspect nhấn tổ hợp Ctrl &#43; F tìm kiếm bình thường, có thể tìm kiếm theo class ."/>
+<meta name="keywords" content=""/>
+<meta name="robots" content="noodp"/>
+<link rel="canonical" href="https://fammanh.github.io/post/javascript-front-end-tips-tricks/" />
+
+
+<link rel="stylesheet" href="https://fammanh.github.io/assets/style.css">
+
+
+<link rel="stylesheet" href="https://fammanh.github.io/style.css">
+
+
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://fammanh.github.io/img/apple-touch-icon-144-precomposed.png">
+<link rel="shortcut icon" href="https://fammanh.github.io/img/favicon.png">
+
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="#1 Dev tool tips and tricks :: Mạnh Phạm Blog — Nơi lưu giữ kiến thức" />
+<meta name="twitter:description" content="Dev tool tips and tricks 1. what is dev tool? 2. Find EventListerners 3. Get EventListerners breakpoints 4. getEventListeners() var elm = document.querySelector(&#39;.btn&#39;) getEventListeners(elm); // Show object events of elm  5. monitorEvent() // Ghi lại mọi event tác động tới elm object monitorEvents(elm); // with options monitorEvents(elm, [&#39;click&#39;, &#39;mouseout&#39;]); // Hủy unmonitorEvents(elm);  7. Find in DOM by CSS selector Bật cửa sổ Inspect nhấn tổ hợp Ctrl &#43; F tìm kiếm bình thường, có thể tìm kiếm theo class ." />
+<meta name="twitter:site" content="https://fammanh.github.io/" />
+<meta name="twitter:creator" content="Manh Pham" />
+<meta name="twitter:image" content="">
+
+
+<meta property="og:locale" content="en" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="#1 Dev tool tips and tricks :: Mạnh Phạm Blog — Nơi lưu giữ kiến thức">
+<meta property="og:description" content="Dev tool tips and tricks 1. what is dev tool? 2. Find EventListerners 3. Get EventListerners breakpoints 4. getEventListeners() var elm = document.querySelector(&#39;.btn&#39;) getEventListeners(elm); // Show object events of elm  5. monitorEvent() // Ghi lại mọi event tác động tới elm object monitorEvents(elm); // with options monitorEvents(elm, [&#39;click&#39;, &#39;mouseout&#39;]); // Hủy unmonitorEvents(elm);  7. Find in DOM by CSS selector Bật cửa sổ Inspect nhấn tổ hợp Ctrl &#43; F tìm kiếm bình thường, có thể tìm kiếm theo class ." />
+<meta property="og:url" content="https://fammanh.github.io/post/javascript-front-end-tips-tricks/" />
+<meta property="og:site_name" content="#1 Dev tool tips and tricks" />
+<meta property="og:image" content="">
+<meta property="og:image:width" content="2048">
+<meta property="og:image:height" content="1024">
+
+<meta property="article:published_time" content="2018-03-16 00:00:00 &#43;0000 UTC" />
+
+
+
+
+
+
+
+</head>
+<body class="">
+<div class="container">
+  <header class="header">
+  <span class="header__inner">
+    <a href="/" class="logo" style="text-decoration: none;">
+  
+    <span class="logo__mark"><svg xmlns="http://www.w3.org/2000/svg" class="greater-icon" width="44" height="44" viewBox="0 0 44 44">
+  <polyline fill="none" stroke="#000" stroke-width="2" points="15 8 29.729 22.382 15 35.367"/>
+</svg>
+</span>
+    <span class="logo__text">Mạnh Phạm</span>
+    <span class="logo__cursor"></span>
+  
+</a>
+
+    <span class="header__right">
+      
+        <nav class="menu">
+  <ul class="menu__inner menu__inner--desktop">
+    
+      
+        
+          <li><a href="/about">About</a></li>
+        
+      
+        
+          <li><a href="/showcase">Showcase</a></li>
+        
+      
+      
+    
+  </ul>
+
+  <ul class="menu__inner menu__inner--mobile">
+    
+      
+        <li><a href="/about">About</a></li>
+      
+    
+      
+        <li><a href="/showcase">Showcase</a></li>
+      
+    
+  </ul>
+</nav>
+
+        <span class="menu-trigger">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M0 0h24v24H0z" fill="none"/>
+            <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+          </svg>
+        </span>
+      
+      <span class="theme-toggle">
+        <svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
+  3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7
+  13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"/>
+</svg>
+
+      </span>
+    </span>
+  </span>
+</header>
+
+
+  <div class="content">
+    
+  <div class="post">
+    <h2 class="post-title"><a href="https://fammanh.github.io/post/javascript-front-end-tips-tricks/">#1 Dev tool tips and tricks</a></h2>
+    <div class="post-meta">
+      
+        <span class="post-date">
+            2018-03-16
+        </span>
+      
+      <span class="post-author">— Written by Manh Pham</span>
+      
+    </div>
+
+    
+
+    
+
+    <div class="post-content">
+      
+
+<h2 id="dev-tool-tips-and-tricks">Dev tool tips and tricks</h2>
+
+<h3 id="1-what-is-dev-tool">1. what is dev tool?</h3>
+
+<h3 id="2-find-eventlisterners">2. Find EventListerners</h3>
+
+<h3 id="3-get-eventlisterners-breakpoints">3. Get EventListerners breakpoints</h3>
+
+<h3 id="4-geteventlisteners">4. getEventListeners()</h3>
+
+<pre><code class="language-javascript">var elm = document.querySelector('.btn')
+getEventListeners(elm);
+// Show object events of elm
+</code></pre>
+
+<h3 id="5-monitorevent">5. monitorEvent()</h3>
+
+<pre><code class="language-javascript">// Ghi lại mọi event tác động tới elm object 
+monitorEvents(elm);
+// with options
+monitorEvents(elm, ['click', 'mouseout']);
+
+// Hủy
+unmonitorEvents(elm);
+
+</code></pre>
+
+<h3 id="7-find-in-dom-by-css-selector">7. Find in DOM by CSS selector</h3>
+
+<p>Bật cửa sổ Inspect nhấn tổ hợp <code>Ctrl + F</code> tìm kiếm bình thường, có thể tìm kiếm theo class <code>.class</code> hoặc theo id <code>#id</code>, hoặc có thể tìm kiếm vừa class vừa id <code>.claccName.clasName#idName</code></p>
+
+<h3 id="9-color-picker">9. Color picker</h3>
+
+<p>Ở tab style có thể sử dụng công cụ color picker để chấm màu bất kì ở trên cửa sổ chrome. Thay đổi mã màu bằng mũi tên lên xuống (HEX, RGBA&hellip;)</p>
+
+<h3 id="10-undoing-style-changes">10. Undoing style changes</h3>
+
+<p><code>Ctrl + Z</code></p>
+
+<h3 id="11-add-remove-classes">11. Add/remove classes</h3>
+
+<p>Sử dụng dấu <code>+</code> ở tab style</p>
+
+<h3 id="12-find-in-styles">12. Find in styles</h3>
+
+<p><code>Filter</code></p>
+
+<h3 id="13-highlight-in-dom-by-selector">13. Highlight in DOM by selector</h3>
+
+<h3 id="14-clear-console">14. Clear console</h3>
+
+<p><code>Ctrl + L</code></p>
+
+<h3 id="15-editable-body">15. Editable body</h3>
+
+<pre><code class="language-javascript">document.body.contentEditable = true;
+// Bây giờ có thể click chuột và sửa thoải mái các đoạn text ở trên trang html
+</code></pre>
+
+<h3 id="16-log-data-formatted-as-tables">16. Log data formatted as tables</h3>
+
+<pre><code class="language-javascript">console.table(objects)
+console.table(objects, ['columnName'])
+</code></pre>
+
+<h3 id="17-preserve-log">17. preserve log</h3>
+
+<p>Ở cửa sổ console, click vào icon Bánh răng và click vào Preserve log( giữ gìn nhật kí) để khi reload trang thì những đoạn code trong console không bị mất</p>
+
+<h3 id="18-debug">18. debug()</h3>
+
+<pre><code class="language-javascript">debug(functionName)
+undebug(functionName)
+</code></pre>
+
+<h3 id="19-monitor">19. monitor()</h3>
+
+<pre><code class="language-javascript">monitor(functionName)
+// Log lại khi function này được gọi
+unmonitor(functionName)
+</code></pre>
+
+<h3 id="20-code-execution-stopwatch">20. Code execution stopwatch</h3>
+
+<p>Thời gian thực hiện 1 hành động</p>
+
+<pre><code class="language-javascript">console.time('myTimer');
+for(var i =0; i &lt;= 100000; i++){}
+console.timeEnd('myTimer');
+// myTimer: 2.193115234375m
+</code></pre>
+
+<h3 id="21-verbose-performance-analysis">21. verbose performance analysis</h3>
+
+<h3 id="22-smart-code-block-indentation">22. Smart code block/Indentation</h3>
+
+<h3 id="23-filter-error-messages">23. Filter error messages</h3>
+
+<h3 id="24-find-in-all-files">24. Find in all files</h3>
+
+<p><code>Ctrl + Shift + F</code> Find in all source files</p>
+
+<h3 id="25-create-breakpoint-anywhere">25. Create breakpoint anywhere</h3>
+
+<h3 id="26-blackbox-scripts">26.  Blackbox scripts</h3>
+
+<h3 id="27-conditional-breakpoints">27. Conditional breakpoints</h3>
+
+<h3 id="28-adding-runiing-snippets">28. Adding/runiing snippets</h3>
+
+<h3 id="29-xhr-breakpoint">29. xhr breakpoint</h3>
+
+<h3 id="30-quick-open-files-by-name">30. quick open files by name</h3>
+
+<h3 id="31-smart-close-tabs">31. smart close tabs</h3>
+
+<h3 id="32-find-only-functions">32. find only functions</h3>
+
+<h3 id="33-open-anything-in-dev-tools">33. open &ldquo;anything&rdquo; in dev tools</h3>
+
+<h3 id="34-capture-site-loading-screenshots">34. capture site loading screenshots</h3>
+
+<h3 id="35-simulate-slower-connections">35. simulate slower connections</h3>
+
+<h3 id="36-reload-options">36. reload options</h3>
+
+<h3 id="37-filter-on-loading">37. filter on loading</h3>
+
+<h3 id="38-filter-loading-by-content-type">38. filter loading by content type</h3>
+
+<h3 id="39-network-activity">39. network activity</h3>
+
+<h3 id="40-get-which-file-sent-a-request">40. get which file sent a request</h3>
+
+<h3 id="41-record-performance">41. record performance</h3>
+
+<h3 id="42-editing-cookies-sessions-etc">42. editing cookies, sessions etc</h3>
+
+<h3 id="43-security">43. security</h3>
+
+<h3 id="44-audits-performance-improvement">44. audits - performance improvement</h3>
+
+<h3 id="45-edit-multiple-lines">45. edit multiple lines</h3>
+
+<h3 id="46-find-next">46. find next</h3>
+
+<h3 id="47-jump-to-matching-bracket">47. jump to matching bracket</h3>
+
+<h3 id="48-emulate-other-devices">48. emulate other devices</h3>
+
+<h3 id="49-screenshot">49. screenshot</h3>
+
+<h3 id="50-save-file-changes-on-the-file-system">50. save file changes on the file system</h3>
+
+<h3 id="51-restart-chrome">51. restart chrome</h3>
+
+<p><a href="https://www.youtube.com/watch?v=oYvtsHu6GmY">Source</a>**</p>
+
+    </div>
+    
+      <div class="pagination">
+        <div class="pagination__title">
+          <span class="pagination__title-h">Read other posts</span>
+          <hr />
+        </div>
+        <div class="pagination__buttons">
+          
+          
+            <span class="button next">
+              <a href="https://fammanh.github.io/post/markdown/">
+                <span class="button__text">#1 Làm chủ Markdown | Mastering MarkDown</span>
+                <span class="button__icon">→</span>
+              </a>
+            </span>
+          
+        </div>
+      </div>
+    
+
+    
+
+    </div>
+
+  </div>
+
+  
+    <footer class="footer">
+  <div class="footer__inner">
+    
+      <a href="/" class="logo" style="text-decoration: none;">
+  
+    <span class="logo__mark"><svg xmlns="http://www.w3.org/2000/svg" class="greater-icon" width="44" height="44" viewBox="0 0 44 44">
+  <polyline fill="none" stroke="#000" stroke-width="2" points="15 8 29.729 22.382 15 35.367"/>
+</svg>
+</span>
+    <span class="logo__text">Mạnh Phạm</span>
+    <span class="logo__cursor"></span>
+  
+</a>
+
+      <div class="copyright">
+        <span>© 2019 Nơi lưu trữ kiến thức</span>
+      </div>
+    
+  </div>
+</footer>
+
+<script src="https://fammanh.github.io/assets/main.js"></script>
+<script src="https://fammanh.github.io/assets/prism.js"></script>
+
+  
+</div>
+
+</body>
+</html>
