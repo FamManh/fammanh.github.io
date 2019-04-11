@@ -6,10 +6,19 @@
     <description>Recent content in Posts on Mạnh Phạm Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 16 Mar 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 11 Apr 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://fammanh.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Cấu trúc dữ liệu và giải thuật</title>
+      <link>https://fammanh.github.io/post/cau-truc-du-lieu-va-giai-thuat/</link>
+      <pubDate>Thu, 11 Apr 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://fammanh.github.io/post/cau-truc-du-lieu-va-giai-thuat/</guid>
+      <description>Bài 1. Mối tương quan giữa cấu trúc dữ liệu và giải thuật Cấu trúc dữ liệu Cấu trúc dữ liệu là cách lưu trữ, tổ chức dữ liệu có thứ tự, có hệ thống để dữ liệu có thể được sử dụng một cách hiệu quả nhất (tìm kiếm nhanh nhất, sắp xếp nhanh nhất). Các kiểu dữ thường gắp: bollean, int, float, double&amp;hellip;. Cách cấu trúc dữ liệu thường gặp: dữ liệu cơ sở, dữ liệu kiểu cấu trúc, class, mảng, danh sách liên kết, Stack, Queue, Cây (Cây nhị phân, cây nhị phân tìm kiếm)&amp;hellip;</description>
+    </item>
     
     <item>
       <title>#1 Dev tool tips and tricks</title>

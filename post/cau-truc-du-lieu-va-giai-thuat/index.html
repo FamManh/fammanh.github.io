@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <title>Cấu trúc dữ liệu và giải thuật :: Mạnh Phạm Blog — Nơi lưu giữ kiến thức</title>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="description" content="Bài 1. Mối tương quan giữa cấu trúc dữ liệu và giải thuật Cấu trúc dữ liệu Cấu trúc dữ liệu là cách lưu trữ, tổ chức dữ liệu có thứ tự, có hệ thống để dữ liệu có thể được sử dụng một cách hiệu quả nhất (tìm kiếm nhanh nhất, sắp xếp nhanh nhất). Các kiểu dữ thường gắp: bollean, int, float, double&amp;hellip;. Cách cấu trúc dữ liệu thường gặp: dữ liệu cơ sở, dữ liệu kiểu cấu trúc, class, mảng, danh sách liên kết, Stack, Queue, Cây (Cây nhị phân, cây nhị phân tìm kiếm)&amp;hellip;"/>
+<meta name="keywords" content=""/>
+<meta name="robots" content="noodp"/>
+<link rel="canonical" href="https://fammanh.github.io/post/cau-truc-du-lieu-va-giai-thuat/" />
+
+
+<link rel="stylesheet" href="https://fammanh.github.io/assets/style.css">
+
+
+<link rel="stylesheet" href="https://fammanh.github.io/style.css">
+
+
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://fammanh.github.io/img/apple-touch-icon-144-precomposed.png">
+<link rel="shortcut icon" href="https://fammanh.github.io/img/favicon.png">
+
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Cấu trúc dữ liệu và giải thuật :: Mạnh Phạm Blog — Nơi lưu giữ kiến thức" />
+<meta name="twitter:description" content="Bài 1. Mối tương quan giữa cấu trúc dữ liệu và giải thuật Cấu trúc dữ liệu Cấu trúc dữ liệu là cách lưu trữ, tổ chức dữ liệu có thứ tự, có hệ thống để dữ liệu có thể được sử dụng một cách hiệu quả nhất (tìm kiếm nhanh nhất, sắp xếp nhanh nhất). Các kiểu dữ thường gắp: bollean, int, float, double&amp;hellip;. Cách cấu trúc dữ liệu thường gặp: dữ liệu cơ sở, dữ liệu kiểu cấu trúc, class, mảng, danh sách liên kết, Stack, Queue, Cây (Cây nhị phân, cây nhị phân tìm kiếm)&amp;hellip;" />
+<meta name="twitter:site" content="https://fammanh.github.io/" />
+<meta name="twitter:creator" content="Manh Pham" />
+<meta name="twitter:image" content="https://fammanh.github.io/img/data-structures-and-algorithms.jpg">
+
+
+<meta property="og:locale" content="en" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Cấu trúc dữ liệu và giải thuật :: Mạnh Phạm Blog — Nơi lưu giữ kiến thức">
+<meta property="og:description" content="Bài 1. Mối tương quan giữa cấu trúc dữ liệu và giải thuật Cấu trúc dữ liệu Cấu trúc dữ liệu là cách lưu trữ, tổ chức dữ liệu có thứ tự, có hệ thống để dữ liệu có thể được sử dụng một cách hiệu quả nhất (tìm kiếm nhanh nhất, sắp xếp nhanh nhất). Các kiểu dữ thường gắp: bollean, int, float, double&amp;hellip;. Cách cấu trúc dữ liệu thường gặp: dữ liệu cơ sở, dữ liệu kiểu cấu trúc, class, mảng, danh sách liên kết, Stack, Queue, Cây (Cây nhị phân, cây nhị phân tìm kiếm)&amp;hellip;" />
+<meta property="og:url" content="https://fammanh.github.io/post/cau-truc-du-lieu-va-giai-thuat/" />
+<meta property="og:site_name" content="Cấu trúc dữ liệu và giải thuật" />
+<meta property="og:image" content="https://fammanh.github.io/img/data-structures-and-algorithms.jpg">
+<meta property="og:image:width" content="2048">
+<meta property="og:image:height" content="1024">
+
+<meta property="article:published_time" content="2019-04-11 00:00:00 &#43;0000 UTC" />
+
+
+
+
+
+
+
+</head>
+<body class="">
+<div class="container">
+  <header class="header">
+  <span class="header__inner">
+    <a href="/" class="logo" style="text-decoration: none;">
+  
+    <span class="logo__mark"><svg xmlns="http://www.w3.org/2000/svg" class="greater-icon" width="44" height="44" viewBox="0 0 44 44">
+  <polyline fill="none" stroke="#000" stroke-width="2" points="15 8 29.729 22.382 15 35.367"/>
+</svg>
+</span>
+    <span class="logo__text">Mạnh Phạm</span>
+    <span class="logo__cursor"></span>
+  
+</a>
+
+    <span class="header__right">
+      
+        <nav class="menu">
+  <ul class="menu__inner menu__inner--desktop">
+    
+      
+        
+          <li><a href="/about">About</a></li>
+        
+      
+        
+          <li><a href="/showcase">Showcase</a></li>
+        
+      
+      
+    
+  </ul>
+
+  <ul class="menu__inner menu__inner--mobile">
+    
+      
+        <li><a href="/about">About</a></li>
+      
+    
+      
+        <li><a href="/showcase">Showcase</a></li>
+      
+    
+  </ul>
+</nav>
+
+        <span class="menu-trigger">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M0 0h24v24H0z" fill="none"/>
+            <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+          </svg>
+        </span>
+      
+      <span class="theme-toggle">
+        <svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
+  3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7
+  13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"/>
+</svg>
+
+      </span>
+    </span>
+  </span>
+</header>
+
+
+  <div class="content">
+    
+  <div class="post">
+    <h2 class="post-title"><a href="https://fammanh.github.io/post/cau-truc-du-lieu-va-giai-thuat/">Cấu trúc dữ liệu và giải thuật</a></h2>
+    <div class="post-meta">
+      
+        <span class="post-date">
+            2019-04-11
+        </span>
+      
+      <span class="post-author">— Written by Manh Pham</span>
+      
+    </div>
+
+    
+
+    
+      <img src="https://fammanh.github.io/img/data-structures-and-algorithms.jpg" class="post-cover" />
+    
+
+    <div class="post-content">
+      
+
+<h1 id="bài-1-mối-tương-quan-giữa-cấu-trúc-dữ-liệu-và-giải-thuật">Bài 1. Mối tương quan giữa cấu trúc dữ liệu và giải thuật</h1>
+
+<h2 id="cấu-trúc-dữ-liệu">Cấu trúc dữ liệu</h2>
+
+<p><strong>Cấu trúc dữ liệu</strong> là cách lưu trữ, tổ chức dữ liệu có thứ tự, có hệ thống để dữ liệu có thể được sử dụng một cách hiệu quả nhất (tìm kiếm nhanh nhất, sắp xếp nhanh nhất).
+Các kiểu dữ thường gắp: bollean, int, float, double&hellip;.
+Cách cấu trúc dữ liệu thường gặp: dữ liệu cơ sở, dữ liệu kiểu cấu trúc, class, mảng, danh sách liên kết, Stack, Queue, Cây (Cây nhị phân, cây nhị phân tìm kiếm)&hellip;</p>
+
+<h3 id="đặc-điểm-của-một-cấu-trúc-dữ-liệu">Đặc điểm của một cấu trúc dữ liệu</h3>
+
+<p><strong>Chính xác:</strong> Cần đảm bảo chính xác nhất.
+<strong>Độ phức tạp thời gian (Time Complexity):</strong> Thời gian chạy hoặc thời gian thực thi của các phép tính của cấu trúc dữ liệu phải là nhỏ nhất có thể.
+<strong>Độ phức tạp về bộ nhớ (Space Complexity):</strong> Sự sử dụng bộ nhớ của mỗi phép tính của cấu trúc dữ liệu nên là nhỏ nhất có thể.</p>
+
+<h2 id="giải-thuật">Giải thuật</h2>
+
+<ul>
+<li>Giải thuât (Algorithms) là một tập hợp hữu han các chỉ thị để dudwoowcj thức thi theo một thứ tự nào đó để thi được kết quả mong muốn. Giải thuật là độc lập với các ngôn ngữ lập trinh, tức là một giải thuật có thể được triển khai trên nhiều ngôn ngữ lập trình khác nhau.</li>
+<li>Các giải thuật bắt buộc phải có: tìm kiếm và sắp xếp, Thêm sửa xóa</li>
+<li>Tùy vào cấu trúc dữ liệu mà ta đưa ra các giải thuật phù hợp khác nhau.</li>
+</ul>
+
+<h2 id="mối-tương-quan">Mối tương quan</h2>
+
+<h1 id="cấu-trúc-dữ-liệu-giải-thuật-chương-trình">Cấu trúc dữ liệu + Giải thuật = Chương trình</h1>
+
+<p>Cấu trúc dữ liệu quyết định giải thuật =&gt; nên có cấu trúc dữ liệu trước rồi mới quyết định giải thuật.
+Do đó khi chúng ta phát triển 1 chương trình thì trước tiên phải phân tích cấu trúc dữ liệu trước ( phải do những người có kinh nghiệm người ta làm nhiều, người ta quan sát thực tế, người ta nghiên cứu lại mới đưa ra 1 cấu trúc dữ liệu phù hợp, khi người ta đưa ra cấu trúc dữ liệu phù hợp rồi) thì chắc chắn các giải thuật cho nó sẽ dễ dàng hơn và thực thi nó tốt hơn thì nó sẽ tạo thành 1 chương trình tối ưu nhất</p>
+
+<h1 id="bài-2-c-và-các-ngôn-ngữ-triển-khai-ctdl-gt">Bài 2. C++ và các ngôn ngữ triển khai CTDL&amp;GT</h1>
+
+<ul>
+<li>C++</li>
+<li>Pascal</li>
+<li>Java</li>
+
+<li><p>C#</p>
+
+<h3 id="tại-sao-lại-c">Tại sao lại C++?</h3>
+
+<p>Ta dùng C++ để cài đặt Cấu trúc dữ liệu và giải thuật: với c/c++ việc dùng để cài đặt sẽ giúp chúng ta có một cách nhìn tổng quát nhất về cấu trúc dữ liệu và giải thuật, hiểu rành rọt cơ chế hoạt động của từng giải thuật&hellip; từ đó rèn luyên được tư duy logic, phán đoán vấn đề, tạo nền tảng vững chắc khi tham gia các dự án bất kỳ được triển khai dưới bất kỳ ngôn ngữ lập trình nào.
+Tự tạo các cấu trúc dữ liệu mà không dùng các thư viện hỗ trợ sẵn.</p></li>
+</ul>
+
+<h1 id="bài-3-một-số-khái-niệm-cần-chuẩn-bị">Bài 3. Một số khái niệm cần chuẩn bị</h1>
+
+<ul>
+<li>Biến</li>
+<li>Địa chỉ</li>
+<li>Con trỏ</li>
+<li>Mảng</li>
+<li>Cấu trúc</li>
+
+<li><p>Hàm</p>
+
+<h3 id="biến">Biến</h3>
+
+<p>Biến là định danh của một vùng trong bộ nhớ dùng để giữ mộ giá trị mà có thể bị thay đổi bới chương trình
+Tất nhiên biến phải được khai báo trước khi sử dùng
+Cách khai báo</p>
+
+<pre><code class="language-c++">type variableNames;
+// type: là một trong các kiểu dữ liệu hợp lệ.
+// variableNames: tên của một hay nhiều biến phân cách nhau bới dấu phẩy.
+float mark1;
+int x;
+</code></pre>
+
+<p>Ngoài ra ta có thể vừa khai báo vừa khởi tạo giá trị ban đầu cho biến:</p>
+
+<pre><code class="language-c++">type varName1 = value,..., varName_n=value;
+float mark1, mark2, mark3, average = 0;
+</code></pre></li>
+</ul>
+
+<h3 id="địa-chỉ">Địa chỉ</h3>
+
+<p>Mọi biến đều có 2 thông tin: giá trị và địa chỉ</p>
+
+<pre><code class="language-c++">int x = 5;
+cout &lt;&lt; &quot;Giá trị của x=&quot; &lt;&lt; x;
+cout &lt;&lt; &quot;Địa chỉ của x=&quot; &lt;&lt; &amp;x;
+</code></pre>
+
+<h3 id="con-trỏ">Con trỏ</h3>
+
+<p>Một con trỏ là 1 biến chứa một địa chỉ bộ nhớ. địa chỉ này là vị trí của một đối tương khác (thường là biến) trong bộ nhớ. Nếu một biến chứa địa chỉ của một biến khác, biến thứ nhất được gọi là trỏ đến biến thứ hai.
+Nếu một biến sẽ chứa địa chỉ của một biến khác thì nó phải được khai báo là một con trỏ. Khai báo 1 biến là con trỏ gồm kiểu dữ liệu cơ sở, một dấu *, và tên biến. Dạng tổng quát để khai báo một biến con trỏ là:</p>
+
+<pre><code class="language-c++">type *poiterVariable;
+// type: xác định kiểu dữ liệu của biến mà con trỏ có thể trỏ đến. Ví dụ con trỏ có kiêu int sẽ trỏ đến biến có kiểu int. Do các phép toán số học trên con trỏ(tăng, giảm) liên quan đến type của nó nên cần phải khai báo type của con trỏ đúng đắn.
+
+//Khai báo:
+DataType * PointerVariable; 
+// Cấp phát:
+PointerVariable  new DataType;
+//Hủy bộ nhớ:
+delete PointerVariable;
+</code></pre>
+
+<pre><code class="language-c++">int *p;
+p = new int; // allocate space for an int
+*p = 100;
+cout &lt;&lt; &quot;At&quot; &lt;&lt; p &lt;&lt; &quot; &quot;;
+cout &lt;&lt; &quot;is  the value &quot; &lt;&lt; *p &lt;&lt; &quot;\n&quot;;
+delete p;
+</code></pre>
+
+<h3 id="mảng">Mảng</h3>
+
+<ul>
+<li>Mảng là một tập hợp các biến có cùng kiểu dữ liệu nằm liên tiếp nhau trong bộ nhớ và được tham chiêu bởi một tên chung chính là tên mảng.</li>
+<li>Tại sao mảng?<br /></li>
+
+<li><p>Mỗi phần tử của mảng được tham chiếu thông qua chỉ mục (index).
+Nếu mảng có n phần tử thì phần tử đầu tiên có chỉ mục là <code>0</code> và phần tử cuối có chỉ mục là <code>n-1</code>
+Để tham chiếu đến một phần tử ta dùng tên mảng và chỉ mục của phần tử được đặt trong cặp dấu <code>[]</code>.
+Ví dụ: a[0]
+Số phần tử trong mảng được gọi là kích thước của mảng, luôn cố định, phải được xác định trước và không đổi trong suốt quá trình thực hiện chương trình.
+Một số trường hợp không thể dùng mảng được nếu số lượng phần tử thay đổi theo thời gian. Thì chúng ta phải thay thế mảng bằng danh sách liên kết, collection</p>
+
+<h4 id="khai-báo-một-mảng-một-chiều">Khai báo một mảng một chiều</h4>
+
+<p>```c++
+// Cú pháp:
+type arayName[elements];
+// type: kiểu dữ liệu của mỗi phần tử mảng
+// elements: số phần tử có trong mảng
+// arayName: tên mảng</p></li>
+</ul>
+
+<pre><code>
+### Cấu trúc (Structures)
+Một cấu trúc là một tập các biến được tham chiếu thông qua một tên chung. Một khai báo cấu trúc hình thành một khuôn mấu (template) mà có thể dùng để tạo nên các biến cấu trúc có cùng kiểu. Những biến mà tạo nên cấu trúc được gọi là thành viên(members).
+**Nói ngắn gọn:** Thực ra nó là 1 kiểu dữ liệu phức hợp do ta tạo ra.
+
+Dạng tổng quát của một khai báo cấu trúc
+```c++
+struct structureName{
+    type member_1;
+    type member_2;
+    ...
+    type member_n
+    ...
+    
+} varNames;
+// struct: từ khóa tạo cấu trúc trong C++
+//structureName: Tên của cấu trúc.
+//type: Kiểu dữ liệu của thành viên tương ứng member_1...: Tên các //biến thành viên của cấu trúc.
+//varNames: Tên các biến cấu trúc phân cách nhau bằng dấu phẩy.
+</code></pre>
+
+<p>Ví dụ:</p>
+
+<pre><code class="language-c++">struct addr{
+    char name[20];
+    char street[30];
+    char city[20];
+    char state[3];
+    unsigned long int zip;
+};
+</code></pre>
+
+<h3 id="hàm">Hàm</h3>
+
+<ul>
+<li>Là 1 khối lệnh thực hiện một công việc hoàn chỉnh (module), được đặt tên và được gọi thực thi nhiều lần tại nhiều vị trí trong chương trình.</li>
+<li>Hàm còn gọi là chương trinh con (subroutine)</li>
+<li>Hàm có thể được gọi từ chương trình chính(hàm main) hoặc từ 1 hàm khác.</li>
+<li>Hàm có giá trị trả về hoặc không. Nếu hàm không có giá trị trả về gọi là thủ tục (Procedure)</li>
+</ul>
+
+<h1 id="bài-4-giới-thiệu-về-hàm-đệ-quy-và-cơ-chế-hoạt-động">Bài 4. Giới thiệu về hàm đệ quy và cơ chế hoạt động</h1>
+
+<ul>
+<li>Một hàm được gọi là đệ qui nếu một lệnh trong thân hàm gọi đến chính hàm đó.</li>
+<li>Đệ qui giúp giải quyết bài toán theo cách nghĩ thông thường một cách tự nhiên.</li>
+<li>Đệ qui phải xác định được <code>điểm dừng</code>. Nếu không xác định chính xác thì làm bài toàn bị sai và có thể bị lặp vĩnh cửu (Stack Overhead).
+Ví dụ: định nghĩa giai thừa của một số nguyên dương n như sau:</li>
+<li>5! = 5 * 4!</li>
+<li>4! = 4 * 3!</li>
+<li>Tức là nếu ta biết được (n-1) giai thừa thì ta sẽ tính được n giai thừa, vì n! = n * (n-1)!</li>
+<li>Thấy n = 0 hoặc n = 1 thì giai thừa luôn =1 =&gt; chính là điểm dừng n! = 1 * 2 * 3 * .. * (n-1) * n = (n-1)! * n (với 0!=1)</li>
+</ul>
+
+<pre><code class="language-c++">int giaiThua(int n){
+    if(n&lt;=1)
+        return(1);
+    return n * giaiThua(n-1); // goi de quy
+}
+</code></pre>
+
+<p>Cơ chế hoạt động của đẹ quy tuân thủ theo LIFO (Last In First Out), còn gọi là cơ chế Stack.</p>
+
+<h1 id="bài-5-linear-recursion-đệ-qui-tuyến-tính">Bài 5. Linear recursion (đệ qui tuyến tính)</h1>
+
+<p>Đệ quy tuyến tính là trường hợp Hàm chỉ gọi lại nó 1 lần. Tương tự:</p>
+
+<pre><code class="language-c++">
+int factorial(int n){
+    if(n==0)
+        return 1;
+    return n * factorial(n-1);
+}
+</code></pre>
+
+<p>Cách làm việc ví dụ n = 5</p>
+
+<pre><code>1) factorial(5)
+    return 5 * factorial(4); // Chuyển biến local 5 vào stack
+2) factorial(4)
+    return 4 * factorial(3); // Chuyên biến local 4 vào stack
+3) factorial(3)
+    return 3 * factorial(2); // Chuyển biên local 3 vào stack
+4) factorial(2)
+    return 2 * factorial(1);
+5) factorial(1)
+    return 1 * factorial(0);
+6) factorial(0)
+    return 1
+=&gt; Return về 1 số có nghĩa đã tới điểm dừng
+=&gt; Call Stack 1 * 1 * 2 * 3 * 4 * 5
+ = 120
+</code></pre>
+
+<h1 id="bài-6-tail-recusion-đệ-qui-đuôi">Bài 6. Tail Recusion ( đệ qui đuôi)</h1>
+
+<p>Đệ qui đuôi là một trường hợp đặc biệt của đệ qui tuyến tính, nó có dạng tương tự như dưới đây</p>
+
+<pre><code class="language-c++">int gcd(int m, int n) {
+    int r;
+    if (m &lt; n) 
+        return gcd(n, m);
+    r = m % n;
+    if (r == 0) 
+        return(n);
+    else 
+        return (gcd(n, r));
+}
+</code></pre>
+
+<p>Ví dụ 1</p>
+
+<pre><code class="language-c++">int m = 25; n = 5;
+int gcd(int m, int n) { 
+    int r;
+    if (m &lt; n)              // false
+        return gcd(n, m);
+    r = m % n;              // 0
+    if (r == 0)             // true
+        return(n);          // return 5
+    else 
+        return (gcd(n, r));
+}
+-------------------
+1) r = 25 % 5 = 0
+    return 5
+</code></pre>
+
+<p>Ví dụ 2</p>
+
+<pre><code class="language-c++">int m = 5; n = 25;
+int gcd(int m, int n) { 
+    int r;
+    if (m &lt; n)              // true
+        return gcd(n, m);   // gọi đệ quy
+    r = m % n;              // 0
+    if (r == 0)             // true
+        return(n);          // return
+    else 
+        return (gcd(n, r));
+}
+---------
+1) return gcd(m, n) =&gt; đệ quy =&gt; lưu các giá trị của biến local ở đây mình có  m và n và r vào stack |m = 5, n = 25| (nhưng r chưa cần lưu)
+2) m = 25, n =5
+    r = 25 % 5 = 0
+    return n = 5;
+kết thúc đệ quy gọi stack (Nhưng nó chưa ngừng)
+=&gt; call stack r = m % n =&gt; r = 5 % 25 = 5 // gọi lại chỉ thị lệnh từ dòng r = m % n
+=&gt; return gcd(25,5) 
+// m = 25, n = 5
+3) r = 25 % 5 = 0
+if(r == 0) = true
+    return n = 5
+// Cơ chế gọi đệ quy lưu trong stack nên nó sẽ trả về 2 lần
+</code></pre>
+
+<p>Ví dụ 3</p>
+
+<pre><code class="language-c++">int m = 7; n = 3;
+int gcd(int m, int n) { 
+    int r;
+    if (m &lt; n)              
+        return gcd(n, m);
+    r = m % n;              
+    if (r == 0)             
+        return(n);          
+    else 
+        return (gcd(n, r));
+}
+-------------------
+1) r = 7 % 3 // 1
+2) gcd(n,r) // gcd(3,1) m = 3, n = 1// bên dưới lệnh này không có chỉ thị lệnh nên không cần phải lưu stack
+3) r = 3 % 1 // 0 =&gt; true
+4) return n // 1
+
+</code></pre>
+
+<h3 id="đây-là-bài-tìm-ước-chung-nhỏ-nhất-của-2-số">Đây là bài tìm ước chung nhỏ nhất của 2 số</h3>
+
+<h1 id="bài-7-binary-recusion-đệ-quy-nhị-phân">Bài 7. Binary Recusion (Đệ quy nhị phân)</h1>
+
+<p>Đệ quy nhị phân là dạng đệ quy gọi 2 lần chính nó, tương tự:</p>
+
+<pre><code class="language-c++">int Fib(int n){
+if(n&lt;=2) 
+    return 1;
+return Fib(n-1) + Fib(n-2);
+</code></pre>
+
+<p>Dãy số Fibonacy: 1 1 2 3 5 8 13
+&gt; 1 nếu n &lt;=2
+&gt; Fib(n-1) + Fib(n-2) nếu n &gt; 2</p>
+
+<pre><code class="language-c++">int n = 6
+Fib(n);
+
+int Fib(int n){
+if(n&lt;=2) 
+    return 1;
+return Fib(n-1) + Fib(n-2); 
+</code></pre>
+
+    </div>
+    
+      <div class="pagination">
+        <div class="pagination__title">
+          <span class="pagination__title-h">Read other posts</span>
+          <hr />
+        </div>
+        <div class="pagination__buttons">
+          
+          
+            <span class="button next">
+              <a href="https://fammanh.github.io/post/javascript-front-end-tips-tricks/">
+                <span class="button__text">#1 Dev tool tips and tricks</span>
+                <span class="button__icon">→</span>
+              </a>
+            </span>
+          
+        </div>
+      </div>
+    
+
+    
+
+    </div>
+
+  </div>
+
+  
+    <footer class="footer">
+  <div class="footer__inner">
+    
+      <a href="/" class="logo" style="text-decoration: none;">
+  
+    <span class="logo__mark"><svg xmlns="http://www.w3.org/2000/svg" class="greater-icon" width="44" height="44" viewBox="0 0 44 44">
+  <polyline fill="none" stroke="#000" stroke-width="2" points="15 8 29.729 22.382 15 35.367"/>
+</svg>
+</span>
+    <span class="logo__text">Mạnh Phạm</span>
+    <span class="logo__cursor"></span>
+  
+</a>
+
+      <div class="copyright">
+        <span>© 2019 Nơi lưu trữ kiến thức</span>
+      </div>
+    
+  </div>
+</footer>
+
+<script src="https://fammanh.github.io/assets/main.js"></script>
+<script src="https://fammanh.github.io/assets/prism.js"></script>
+
+  
+</div>
+
+</body>
+</html>

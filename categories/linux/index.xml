@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Linux on Mạnh Phạm Blog</title>
+    <link>https://fammanh.github.io/categories/linux/</link>
+    <description>Recent content in Linux on Mạnh Phạm Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 08 Mar 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://fammanh.github.io/categories/linux/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Linux P1: Tìm hiểu về shell trong Linux</title>
+      <link>https://fammanh.github.io/post/linux-1-tim-hieu-ve-shell/</link>
+      <pubDate>Thu, 08 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://fammanh.github.io/post/linux-1-tim-hieu-ve-shell/</guid>
+      <description>Phần 1: Tìm hiểu Shell trong Linux Shell là gì? Khi nhắc đến dòng lênh (Command Line) là chúng ta đang nói về shell. Shell là chương trình nhận lệnh từ bàn phím và gửi chúng tới hệ điều hành để thực thi. Hầu như tất cả các nhà cung cấp bản phân phối linux từ dự án GNU gọi là Bash. Bash viết tắt của từ (Bourne Again SHell), trên thực tế bash là phiên bản nâng cấp thay thế cho sh, phiên bản Unix shell gốc được viết bởi Steve Bourne.</description>
+    </item>
+    
+  </channel>
+</rss>
